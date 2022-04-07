@@ -3,6 +3,7 @@
    padding: 0;
    font-family: 'Karla', sans-serif;
    text-decoration: none;
+   box-sizing: content-box;
 }
 
 header{
@@ -68,6 +69,7 @@ header{
 
 .banner-content{
    flex: 1;
+   margin-right: 20px;
 }
 
 .banner-content h1{
@@ -206,4 +208,72 @@ footer{
 footer img{
    height: 80px;
    padding: 30px 0;
+}
+
+.menuMobile{
+   display:none;
+   width: 50px;
+   height: 30px;
+   position: absolute;
+   right: 10px;
+}
+
+.menu-line{
+   height: 3px;
+   background-color: #FFF;
+}
+
+@media (max-width: 950px){
+   #banner .container{
+      flex-direction: column;
+   }
+   .banner-img{
+      order: -1;
+      margin-top: 20px;
+   }
+   .banner-img img{
+      max-width: 90%;
+      margin: 0;
+      box-shadow: 8px 8px #4c70ca;
+   }
+}
+
+@media (max-width: 815px){
+   .page-content .container{
+      flex-direction: column;
+   }
+   footer .container{
+      flex-direction: column;
+   }
+
+   .menuMobile{
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   .header-menu{
+      display: none;
+   }
+}
+@media (max-width: 544px){
+   .widget-content{
+      flex-direction: column;
+   }
+   .widget-img-box img{
+      width: 250px;
+      height: 250px;
+   }
+   
+   .banner-content{
+      margin-left: 20px;
+   }
+   .banner-content h1{
+      font-size: 25px;
+   }
+   .banner-content p{
+      font-size: 18px;
+   }
+   .banner-button{
+      width: 80%;
+   }
 }

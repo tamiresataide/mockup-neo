@@ -10,6 +10,18 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap" rel="stylesheet">
+
+   <script type="text/javascript">
+      window.onload = function () {
+        document.querySelector(".menuMobile").addEventListener("click", function () {
+          if (document.querySelector(".menu nav ul ").style.display == 'flex') {
+            document.querySelector(".menu nav ul ").style.display = 'none';
+          } else {
+            document.querySelector(".menu nav ul ").style.display = 'flex';
+          }
+        });
+      };
+    </script>
 </head>
 <body>
    <!--Inicio do cabeçalho -->
@@ -22,7 +34,12 @@
            </a>
          </div>
          <!--Menu principal-->
-         <nav>
+         <div class="menuMobile">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+         </div>
+         <nav> 
             <div class="header-menu">
                <ul id="menu">
                   <li><a href="">Início</a></li>
@@ -118,7 +135,6 @@
             <img src="./assets/images/coral.jpg">
             <img src="./assets/images/iquine.jpg">
             <img src="./assets/images/hidracor.jpg">
-         </div>
       </div>
    </footer>
 
